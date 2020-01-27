@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D43B58CF23DEFA9900A4FA92 /* GeolocationSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B58CE23DEFA9900A4FA92 /* GeolocationSubscriptionViewController.swift */; };
+		D43B58D123DEFAAA00A4FA92 /* GeolocationSubscriptionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43B58D023DEFAAA00A4FA92 /* GeolocationSubscriptionViewController.storyboard */; };
 		D471C36223DD91DA00B983CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471C36123DD91DA00B983CD /* AppDelegate.swift */; };
 		D471C36423DD91DA00B983CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471C36323DD91DA00B983CD /* SceneDelegate.swift */; };
 		D471C36623DD91DA00B983CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471C36523DD91DA00B983CD /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D43B58CE23DEFA9900A4FA92 /* GeolocationSubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationSubscriptionViewController.swift; sourceTree = "<group>"; };
+		D43B58D023DEFAAA00A4FA92 /* GeolocationSubscriptionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GeolocationSubscriptionViewController.storyboard; sourceTree = "<group>"; };
 		D471C35E23DD91DA00B983CD /* RxPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D471C36123DD91DA00B983CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D471C36323DD91DA00B983CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D43B58CD23DEFA4100A4FA92 /* Day2 */ = {
+			isa = PBXGroup;
+			children = (
+				D43B58CE23DEFA9900A4FA92 /* GeolocationSubscriptionViewController.swift */,
+				D43B58D023DEFAAA00A4FA92 /* GeolocationSubscriptionViewController.storyboard */,
+			);
+			path = Day2;
+			sourceTree = "<group>";
+		};
 		D471C35523DD91DA00B983CD = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +117,7 @@
 			children = (
 				D471C38A23DD938600B983CD /* Extension */,
 				D471C38323DD91FA00B983CD /* Day1 */,
+				D43B58CD23DEFA4100A4FA92 /* Day2 */,
 				D471C36123DD91DA00B983CD /* AppDelegate.swift */,
 				D471C36323DD91DA00B983CD /* SceneDelegate.swift */,
 				D471C36523DD91DA00B983CD /* ViewController.swift */,
@@ -241,6 +255,7 @@
 				D471C36B23DD91DC00B983CD /* Assets.xcassets in Resources */,
 				D471C36923DD91DA00B983CD /* Main.storyboard in Resources */,
 				D471C39323DD9D7200B983CD /* AddingNumbersViewController.storyboard in Resources */,
+				D43B58D123DEFAAA00A4FA92 /* GeolocationSubscriptionViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +303,7 @@
 				D471C39123DD9D6900B983CD /* AddingNumbersViewController.swift in Sources */,
 				D471C36423DD91DA00B983CD /* SceneDelegate.swift in Sources */,
 				D471C39723DD9D8900B983CD /* SimpleValidationViewController.swift in Sources */,
+				D43B58CF23DEFA9900A4FA92 /* GeolocationSubscriptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

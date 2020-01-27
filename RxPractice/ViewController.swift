@@ -26,11 +26,13 @@ class ViewController: UIViewController {
         enum iPhoneRow: CaseIterable {
             case addingNumbers
             case simpleValidation
+            case geolocationSubscription
             
             var title: String {
                 switch self {
                 case .addingNumbers: return "Adding numbers"
                 case .simpleValidation: return "Simple validation"
+                case .geolocationSubscription: return "Geolocation Subscription"
                 }
             }
             
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
                 switch self {
                 case .addingNumbers: return "Bindings"
                 case .simpleValidation: return "Bindings"
+                case .geolocationSubscription: return "Observers, services and Drive example"
                 }
             }
         }
@@ -114,6 +117,9 @@ extension ViewController: UITableViewDelegate {
                 navigationController?.pushViewController(viewController, animated: true)
             case .simpleValidation:
                 let viewController = SimpleValidationViewController.instantiate() as! SimpleValidationViewController
+                navigationController?.pushViewController(viewController, animated: true)
+            case .geolocationSubscription:
+                let viewController = GeolocationSubscriptionViewController.instantiate() as! GeolocationSubscriptionViewController
                 navigationController?.pushViewController(viewController, animated: true)
             }
         case .tableCollectionView:
