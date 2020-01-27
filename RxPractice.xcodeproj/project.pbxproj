@@ -17,7 +17,7 @@
 		D471C38C23DD939E00B983CD /* UIViewController+Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471C38B23DD939E00B983CD /* UIViewController+Instantiatable.swift */; };
 		D471C39123DD9D6900B983CD /* AddingNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471C39023DD9D6900B983CD /* AddingNumbersViewController.swift */; };
 		D471C39323DD9D7200B983CD /* AddingNumbersViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D471C39223DD9D7200B983CD /* AddingNumbersViewController.storyboard */; };
-		D471C39523DD9D8000B983CD /* SimpleValidation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D471C39423DD9D8000B983CD /* SimpleValidation.storyboard */; };
+		D471C39523DD9D8000B983CD /* SimpleValidationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D471C39423DD9D8000B983CD /* SimpleValidationViewController.storyboard */; };
 		D471C39723DD9D8900B983CD /* SimpleValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471C39623DD9D8900B983CD /* SimpleValidationViewController.swift */; };
 		D471C39D23DDA8BE00B983CD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D471C39C23DDA8BE00B983CD /* RxSwift.framework */; };
 		D471C3A123DDA8CD00B983CD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D471C3A023DDA8CD00B983CD /* RxCocoa.framework */; };
@@ -50,7 +50,7 @@
 		D471C38D23DD94AF00B983CD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D471C39023DD9D6900B983CD /* AddingNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingNumbersViewController.swift; sourceTree = "<group>"; };
 		D471C39223DD9D7200B983CD /* AddingNumbersViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddingNumbersViewController.storyboard; sourceTree = "<group>"; };
-		D471C39423DD9D8000B983CD /* SimpleValidation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleValidation.storyboard; sourceTree = "<group>"; };
+		D471C39423DD9D8000B983CD /* SimpleValidationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleValidationViewController.storyboard; sourceTree = "<group>"; };
 		D471C39623DD9D8900B983CD /* SimpleValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewController.swift; sourceTree = "<group>"; };
 		D471C39B23DDA8A800B983CD /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxCocoa.framework.dSYM; path = Carthage/Build/iOS/RxCocoa.framework.dSYM; sourceTree = "<group>"; };
 		D471C39C23DDA8BE00B983CD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 				D471C39023DD9D6900B983CD /* AddingNumbersViewController.swift */,
 				D471C39223DD9D7200B983CD /* AddingNumbersViewController.storyboard */,
 				D471C39623DD9D8900B983CD /* SimpleValidationViewController.swift */,
-				D471C39423DD9D8000B983CD /* SimpleValidation.storyboard */,
+				D471C39423DD9D8000B983CD /* SimpleValidationViewController.storyboard */,
 			);
 			path = Day1;
 			sourceTree = "<group>";
@@ -237,7 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D471C36E23DD91DC00B983CD /* LaunchScreen.storyboard in Resources */,
-				D471C39523DD9D8000B983CD /* SimpleValidation.storyboard in Resources */,
+				D471C39523DD9D8000B983CD /* SimpleValidationViewController.storyboard in Resources */,
 				D471C36B23DD91DC00B983CD /* Assets.xcassets in Resources */,
 				D471C36923DD91DA00B983CD /* Main.storyboard in Resources */,
 				D471C39323DD9D7200B983CD /* AddingNumbersViewController.storyboard in Resources */,
