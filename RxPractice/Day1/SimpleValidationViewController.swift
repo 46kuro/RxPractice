@@ -24,29 +24,30 @@ class SimpleValidationViewController: UIViewController {
 
         title = "Simple validation"
         
-        usernameTextField.rx.text.orEmpty.map { username in
-            return username.count >= 5
-        }
-        .bind(to: usernameAnnotationLabel.rx.isHidden)
-        .disposed(by: disposeBag)
+        let usernameMap = usernameTextField.rx.text.orEmpty
+            .map { $0.count >= 5 }
+            .share(replay: 1)
         
-        passwordTextField.rx.text.orEmpty.map { passwordTextField in
-            return passwordTextField.count >= 5
-        }
-        .bind(to: passwordAnnotationLabel.rx.isHidden)
-        .disposed(by: disposeBag)
+        usernameMap
+            .bind(to: usernameAnnotationLabel.rx.isHidden)
+            .disposed(by: disposeBag)
         
-        Observable.combineLatest(usernameTextField.rx.text.orEmpty, passwordTextField.rx.text.orEmpty)
-            .map({ username, password in 
-                return username.count >= 5 && password.count >= 5
-            })
+        let passwordMap = passwordTextField.rx.text.orEmpty.map { $0.count >= 5 }
+            .share(replay: 1)
+        
+        passwordMap
+            .bind(to: passwordAnnotationLabel.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        Observable.combineLatest(usernameMap, passwordMap)
+            .map { return $0 && $1 }
             .bind(to: doSomethingButton.rx.isEnabled)
             .disposed(by: disposeBag)
         doSomethingButton.rx.tap
-            .subscribe(onNext: { [unowned self] _ in
+            .subscribe(onNext: { [weak self] _ in
                 let alert = UIAlertController(title: "RxExample", message: "This is wonderful", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                self?.present(alert, animated: true, completion: nil)
             })
             .disposed(by: disposeBag)
     }
