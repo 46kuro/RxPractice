@@ -26,8 +26,14 @@ practice to understand RxSwift.
 * understand async  Rest API with RxSwift
 * understand 
 
-#### Project
+#### Task
+* Geolocation Subscription
+  * 
+  * [create / diferred](https://qiita.com/moaible/items/de94c574b25ea4f0ef17)
+
 * implementing Rest API with RxSwift
+
+
 
 ### Day3
 #### 

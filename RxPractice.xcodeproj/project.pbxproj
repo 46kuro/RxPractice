@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D43B58CF23DEFA9900A4FA92 /* GeolocationSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B58CE23DEFA9900A4FA92 /* GeolocationSubscriptionViewController.swift */; };
 		D43B58D123DEFAAA00A4FA92 /* GeolocationSubscriptionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43B58D023DEFAAA00A4FA92 /* GeolocationSubscriptionViewController.storyboard */; };
+		D43B58D323DF180F00A4FA92 /* GeolocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B58D223DF180F00A4FA92 /* GeolocationService.swift */; };
 		D471C36223DD91DA00B983CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471C36123DD91DA00B983CD /* AppDelegate.swift */; };
 		D471C36423DD91DA00B983CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471C36323DD91DA00B983CD /* SceneDelegate.swift */; };
 		D471C36623DD91DA00B983CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471C36523DD91DA00B983CD /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		D43B58CE23DEFA9900A4FA92 /* GeolocationSubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationSubscriptionViewController.swift; sourceTree = "<group>"; };
 		D43B58D023DEFAAA00A4FA92 /* GeolocationSubscriptionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GeolocationSubscriptionViewController.storyboard; sourceTree = "<group>"; };
+		D43B58D223DF180F00A4FA92 /* GeolocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationService.swift; sourceTree = "<group>"; };
 		D471C35E23DD91DA00B983CD /* RxPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D471C36123DD91DA00B983CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D471C36323DD91DA00B983CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				D43B58CE23DEFA9900A4FA92 /* GeolocationSubscriptionViewController.swift */,
 				D43B58D023DEFAAA00A4FA92 /* GeolocationSubscriptionViewController.storyboard */,
+				D43B58D223DF180F00A4FA92 /* GeolocationService.swift */,
 			);
 			path = Day2;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43B58D323DF180F00A4FA92 /* GeolocationService.swift in Sources */,
 				D471C38C23DD939E00B983CD /* UIViewController+Instantiatable.swift in Sources */,
 				D471C36623DD91DA00B983CD /* ViewController.swift in Sources */,
 				D471C36223DD91DA00B983CD /* AppDelegate.swift in Sources */,

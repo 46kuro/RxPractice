@@ -6,7 +6,6 @@
 //  Copyright © 2020 Shinji Kurosawa. All rights reserved.
 //
 
-import CoreLocation
 import RxCocoa
 import RxSwift
 import UIKit
@@ -17,30 +16,23 @@ class GeolocationSubscriptionViewController: UIViewController {
     @IBOutlet weak var latLabel: UILabel!
     @IBOutlet weak var lonLabel: UILabel!
     
-    let locationManager = CLLocationManager()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self
-    }
-}
-
-extension GeolocationSubscriptionViewController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
-        case .authorizedWhenInUse, .authorizedAlways:
-            guard let lat = manager.location?.coordinate.latitude, 
-                let lon = manager.location?.coordinate.longitude else { return }
-            latLabel.text = "lat: \(lat)"
-            lonLabel.text = "lon: \(lon)"
-            break
-        case .denied, .restricted:
-            break
-        @unknown default:
-            fatalError()
-        }
+        
+        let service = GeolocationService.shared
+        
+        service.authorized
+            .map{ !$0 }
+            .drive(statusLabel.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        service.location
+            .drive(onNext: { [weak self] in
+                self?.latLabel.text = "lat: \($0.latitude)" 
+                self?.lonLabel.text = "lon: \($0.longitude)"
+            })
+            .disposed(by: disposeBag)
     }
 }
