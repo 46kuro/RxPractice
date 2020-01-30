@@ -25,6 +25,8 @@
 		D471C39D23DDA8BE00B983CD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D471C39C23DDA8BE00B983CD /* RxSwift.framework */; };
 		D471C3A123DDA8CD00B983CD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D471C3A023DDA8CD00B983CD /* RxCocoa.framework */; };
 		D471C3A523DDA93000B983CD /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D471C3A423DDA93000B983CD /* RxRelay.framework */; };
+		D4D0AD3923E2CB580038A691 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D0AD3723E2CB580038A691 /* RxCLLocationManagerDelegateProxy.swift */; };
+		D4D0AD3A23E2CB580038A691 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D0AD3823E2CB580038A691 /* CLLocationManager+Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		D471C39C23DDA8BE00B983CD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		D471C3A023DDA8CD00B983CD /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		D471C3A423DDA93000B983CD /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		D4D0AD3723E2CB580038A691 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
+		D4D0AD3823E2CB580038A691 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 		D471C38A23DD938600B983CD /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D4D0AD3823E2CB580038A691 /* CLLocationManager+Rx.swift */,
+				D4D0AD3723E2CB580038A691 /* RxCLLocationManagerDelegateProxy.swift */,
 				D471C38B23DD939E00B983CD /* UIViewController+Instantiatable.swift */,
 			);
 			path = Extension;
@@ -304,8 +310,10 @@
 				D471C38C23DD939E00B983CD /* UIViewController+Instantiatable.swift in Sources */,
 				D471C36623DD91DA00B983CD /* ViewController.swift in Sources */,
 				D471C36223DD91DA00B983CD /* AppDelegate.swift in Sources */,
+				D4D0AD3923E2CB580038A691 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
 				D471C39123DD9D6900B983CD /* AddingNumbersViewController.swift in Sources */,
 				D471C36423DD91DA00B983CD /* SceneDelegate.swift in Sources */,
+				D4D0AD3A23E2CB580038A691 /* CLLocationManager+Rx.swift in Sources */,
 				D471C39723DD9D8900B983CD /* SimpleValidationViewController.swift in Sources */,
 				D43B58CF23DEFA9900A4FA92 /* GeolocationSubscriptionViewController.swift in Sources */,
 			);

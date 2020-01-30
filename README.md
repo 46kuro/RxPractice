@@ -23,17 +23,13 @@ practice to understand RxSwift.
   
 ### Day2
 #### Purpose
-* understand async  Rest API with RxSwift
-* understand 
+* understand to show async geolocation value
 
 #### Task
 * Geolocation Subscription
-  * 
   * [create / diferred](https://qiita.com/moaible/items/de94c574b25ea4f0ef17)
-
-* implementing Rest API with RxSwift
-
-
+  * copy CLLocationManager+Rx and RxCLLocationManagerDelegateProxy and implement GeolocaitionService Logic.
+    * TODO: Read CLLocationManager+Rx and RxCLLocationManagerDelegateProxy 
 
 ### Day3
 #### 

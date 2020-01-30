@@ -20,12 +20,17 @@ class GeolocationService {
     private (set) var location: Driver<CLLocationCoordinate2D>
     
     private init() {
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+        locationManager.distanceFilter = kCLDistanceFilterNone
+        locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         
         authorized = Observable.deferred { [weak locationManager] in
             let status = CLLocationManager.authorizationStatus()
-            return Observable.just(status)
+            guard let locationManager = locationManager else {
+                return Observable.just(status)
+            }
+            return locationManager
+                .rx.didChangeAuthorizationStatus
+                .startWith(status)
         }
         .asDriver(onErrorJustReturn: CLAuthorizationStatus.notDetermined)
         .map({
@@ -37,13 +42,14 @@ class GeolocationService {
             }
         })
         
-        location = Observable.deferred({ [weak locationManager] in
-            // TODO: Observe Coordinate
-            return Observable.just([locationManager!.location!.coordinate])
-        })
-        .asDriver(onErrorJustReturn: [])
-        .flatMap {
-            return $0.last.map(Driver.just) ?? Driver.empty()
-        }
+        location = locationManager.rx.didUpdateLocations
+            .asDriver(onErrorJustReturn: [])
+            .flatMap {
+                return $0.last.map(Driver.just) ?? Driver.empty()
+            }
+            .map { $0.coordinate }
+        
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
 }
