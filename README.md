@@ -32,7 +32,19 @@ practice to understand RxSwift.
     * TODO: Read CLLocationManager+Rx and RxCLLocationManagerDelegateProxy 
 
 ### Day3
-#### 
+#### Purpose
+* understand simple MVVM example
+
+#### Task
+* Implement Github SignUp(Vanilla Observables and Using Driver)
+  * flatMapLatest
+    * [【Swift】RxSwiftのPlaygroundを読む④](https://qiita.com/KentaKudo/items/7d939b6c05aa7daf9746)
+    * switchLatest
+      * [RxSwiftの機能カタログ](https://qiita.com/k5n/items/e80ab6bff4bbb170122d)
+  * observeOn(MainScheduler.instance)
+    * [RxSwiftにおけるマルチスレッドの理解を深める — Schedulerについて](https://medium.com/eureka-engineering/rxswift%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%81%AE%E7%90%86%E8%A7%A3%E3%82%92%E6%B7%B1%E3%82%81%E3%82%8B-scheduler%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6-2471ec76e518)
+  * how to make Binder
+    * [RxSwiftでBindTo可能な独自プロパティを生やす方法](https://blog.a-azarashi.jp/entry/2018/01/13/222537/)
 
 ## Understand RxSwift overview
 * [Hot / Cold](https://www.slideshare.net/yukitakahashi3139241/hot-cold)

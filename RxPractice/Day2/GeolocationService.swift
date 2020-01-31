@@ -16,8 +16,8 @@ class GeolocationService {
     static let shared = GeolocationService()
     private let locationManager = CLLocationManager()
     
-    private (set) var authorized: Driver<Bool>
-    private (set) var location: Driver<CLLocationCoordinate2D>
+    private(set) var authorized: Driver<Bool>
+    private(set) var location: Driver<CLLocationCoordinate2D>
     
     private init() {
         locationManager.distanceFilter = kCLDistanceFilterNone
