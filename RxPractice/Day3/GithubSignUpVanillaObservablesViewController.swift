@@ -34,7 +34,8 @@ class GithubSignUpVanillaObservablesViewController: UIViewController {
             input: (
                 username: usernameTextField.rx.text.orEmpty.asObservable(),
                 password: passwordTextField.rx.text.orEmpty.asObservable(),
-                passwordRepeat: passwordRepeatTextField.rx.text.orEmpty.asObservable() 
+                passwordRepeat: passwordRepeatTextField.rx.text.orEmpty.asObservable(),
+                loginTaps: signUpButton.rx.tap.asObservable()
             ), 
             dependency: (
                 API: GitHubDefaultAPI.sharedAPI,
@@ -52,6 +53,20 @@ class GithubSignUpVanillaObservablesViewController: UIViewController {
         
         viewModel.passwordRepeatValidationResult
             .bind(to: passwordRepeatLabel.rx.validationResult)
+            .disposed(by: disposeBag)
+        
+        viewModel.signingIn
+            .bind(to: indicatorView.rx.isAnimating)
+            .disposed(by: disposeBag)
+        
+        viewModel.signedIn
+            .subscribe { [weak self] in 
+                guard let self = self, let element = $0.element else { return }
+                let message = element ? "Mock: Signed in to GitHub." : "Mock: Sign in to GitHub failed"
+                let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
             .disposed(by: disposeBag)
     }
 }
