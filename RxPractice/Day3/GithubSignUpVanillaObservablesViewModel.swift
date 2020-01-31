@@ -20,11 +20,15 @@ class GithubSignUpVanillaObservablesViewModel {
             username: Observable<String>, 
             password: Observable<String>, 
             passwordRepeat: Observable<String>
-        )) {
-        let api = GitHubDefaultAPI.sharedAPI
+        ), 
+        dependency: (
+            API: GitHubAPI, 
+            validationService: GitHubValidationService
+        )
+    ) {
         usernameValidationResult = input.username
             .flatMapLatest { 
-                return GitHubDefaultValidationService.sharedValidationService
+                return dependency.validationService
                     .validateUsername($0)
                     .observeOn(MainScheduler.instance)
                     .catchErrorJustReturn(.failed(message: "Error contacting server"))
@@ -33,14 +37,13 @@ class GithubSignUpVanillaObservablesViewModel {
         
         passwordValidationResult = input.password
             .map {
-                GitHubDefaultValidationService.sharedValidationService
-                    .validatePassword($0)
+                dependency.validationService.validatePassword($0)
             }
             .share(replay: 1)
         
         passwordRepeatValidationResult = Observable.combineLatest(
             input.password, input.passwordRepeat,
-            resultSelector: GitHubDefaultValidationService.sharedValidationService.validateRepeatedPassword
+            resultSelector: dependency.validationService.validateRepeatedPassword
         )
             .share(replay: 1)
     }

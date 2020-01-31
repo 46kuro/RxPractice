@@ -35,6 +35,10 @@ class GithubSignUpVanillaObservablesViewController: UIViewController {
                 username: usernameTextField.rx.text.orEmpty.asObservable(),
                 password: passwordTextField.rx.text.orEmpty.asObservable(),
                 passwordRepeat: passwordRepeatTextField.rx.text.orEmpty.asObservable() 
+            ), 
+            dependency: (
+                API: GitHubDefaultAPI.sharedAPI,
+                validationService: GitHubDefaultValidationService.sharedValidationService
             )
         )
         
@@ -43,6 +47,10 @@ class GithubSignUpVanillaObservablesViewController: UIViewController {
             .disposed(by: disposeBag)
         
         viewModel.passwordValidationResult
+            .bind(to: passwordValidationLabel.rx.validationResult)
+            .disposed(by: disposeBag)
+        
+        viewModel.passwordRepeatValidationResult
             .bind(to: passwordRepeatLabel.rx.validationResult)
             .disposed(by: disposeBag)
     }
