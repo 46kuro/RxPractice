@@ -47,4 +47,6 @@ practice to understand RxSwift.
     * [RxSwiftでBindTo可能な独自プロパティを生やす方法](https://blog.a-azarashi.jp/entry/2018/01/13/222537/)
 
 ## Understand RxSwift overview
+* Catalog
+  * [RxSwiftの機能カタログ](https://qiita.com/k5n/items/e80ab6bff4bbb170122d)
 * [Hot / Cold](https://www.slideshare.net/yukitakahashi3139241/hot-cold)
