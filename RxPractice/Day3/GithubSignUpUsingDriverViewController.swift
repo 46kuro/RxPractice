@@ -29,5 +29,32 @@ class GithubSignUpUsingDriverViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Github Signup"
+        
+        viewModel = GithubSignUpUsingDriverViewModel(
+            input: (
+                username: usernameTextField.rx.text.orEmpty.asDriver(),
+                password: passwordTextField.rx.text.orEmpty.asDriver(),
+                passwordRepeat: passwordRepeatTextField.rx.text.orEmpty.asDriver(),
+                signUpTap: signUpButton.rx.tap.asSignal()
+            ),
+            dependency: (
+                API: GitHubDefaultAPI.sharedAPI,
+                validationService: GitHubDefaultValidationService.sharedValidationService
+            )
+        )
+        
+        viewModel.usernameResult
+            .drive(usernameValidationLabel.rx.validationResult)
+            .disposed(by: disposeBag)
+        
+        viewModel.passwordResult
+            .drive(passwordValidationLabel.rx.validationResult)
+            .disposed(by: disposeBag)
+        
+        viewModel.passwordRepeatResult
+            .drive(passwordRepeatLabel.rx.validationResult)
+            .disposed(by: disposeBag)
+        
+        signUpButton.rx.isEnabled
     }
 }

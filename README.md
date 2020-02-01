@@ -46,6 +46,10 @@ practice to understand RxSwift.
   * [RxSwiftでBindTo可能な独自プロパティを生やす方法](https://blog.a-azarashi.jp/entry/2018/01/13/222537/)
 * distinctUntilChanged
   * [【Swift】RxSwiftのPlaygroundを読む⑤](https://qiita.com/KentaKudo/items/c5eefa22706893834c86)
+* Driver
+  * [RxCocoaが提供するDriverって何？](https://qiita.com/k5n/items/44ef2ab400f47fb66731)
+* Signal
+  * [RxCocoa 4 の Signal と Relay のまとめ](https://tech.mercari.com/entry/2017/12/04/103247)
 
 ## Understand RxSwift overview
 * Catalog
