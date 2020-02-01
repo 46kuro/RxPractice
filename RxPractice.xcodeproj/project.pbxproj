@@ -35,6 +35,9 @@
 		D4D0AD4B23E41E550038A691 /* String+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D0AD4A23E41E550038A691 /* String+URL.swift */; };
 		D4D0AD4F23E4668E0038A691 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D0AD4D23E4668E0038A691 /* ActivityIndicator.swift */; };
 		D4D0AD5023E4668E0038A691 /* GeolocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D0AD4E23E4668E0038A691 /* GeolocationService.swift */; };
+		D4D0AD5323E55DD70038A691 /* GithubSignUpUsingDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D0AD5223E55DD70038A691 /* GithubSignUpUsingDriverViewController.swift */; };
+		D4D0AD5523E55E090038A691 /* GithubSignUpUsingDriverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D0AD5423E55E090038A691 /* GithubSignUpUsingDriverViewController.storyboard */; };
+		D4D0AD5723E55E6D0038A691 /* GithubSignUpUsingDriverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D0AD5623E55E6D0038A691 /* GithubSignUpUsingDriverViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		D4D0AD4A23E41E550038A691 /* String+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+URL.swift"; sourceTree = "<group>"; };
 		D4D0AD4D23E4668E0038A691 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		D4D0AD4E23E4668E0038A691 /* GeolocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeolocationService.swift; sourceTree = "<group>"; };
+		D4D0AD5223E55DD70038A691 /* GithubSignUpUsingDriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSignUpUsingDriverViewController.swift; sourceTree = "<group>"; };
+		D4D0AD5423E55E090038A691 /* GithubSignUpUsingDriverViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GithubSignUpUsingDriverViewController.storyboard; sourceTree = "<group>"; };
+		D4D0AD5623E55E6D0038A691 /* GithubSignUpUsingDriverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubSignUpUsingDriverViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +210,9 @@
 				D4D0AD3C23E2CE920038A691 /* GithubSignUpVanillaObservablesViewController.swift */,
 				D4D0AD3E23E2CE9A0038A691 /* GithubSignUpVanillaObservablesViewController.storyboard */,
 				D4D0AD4023E2D3500038A691 /* GithubSignUpVanillaObservablesViewModel.swift */,
+				D4D0AD5223E55DD70038A691 /* GithubSignUpUsingDriverViewController.swift */,
+				D4D0AD5423E55E090038A691 /* GithubSignUpUsingDriverViewController.storyboard */,
+				D4D0AD5623E55E6D0038A691 /* GithubSignUpUsingDriverViewModel.swift */,
 			);
 			path = Day3;
 			sourceTree = "<group>";
@@ -300,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D471C36E23DD91DC00B983CD /* LaunchScreen.storyboard in Resources */,
+				D4D0AD5523E55E090038A691 /* GithubSignUpUsingDriverViewController.storyboard in Resources */,
 				D471C39523DD9D8000B983CD /* SimpleValidationViewController.storyboard in Resources */,
 				D471C36B23DD91DC00B983CD /* Assets.xcassets in Resources */,
 				D471C36923DD91DA00B983CD /* Main.storyboard in Resources */,
@@ -353,6 +363,7 @@
 				D471C36623DD91DA00B983CD /* ViewController.swift in Sources */,
 				D471C36223DD91DA00B983CD /* AppDelegate.swift in Sources */,
 				D4D0AD3923E2CB580038A691 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
+				D4D0AD5323E55DD70038A691 /* GithubSignUpUsingDriverViewController.swift in Sources */,
 				D471C39123DD9D6900B983CD /* AddingNumbersViewController.swift in Sources */,
 				D4D0AD4823E408480038A691 /* BindingExtensions.swift in Sources */,
 				D471C36423DD91DA00B983CD /* SceneDelegate.swift in Sources */,
@@ -362,6 +373,7 @@
 				D4D0AD3D23E2CE920038A691 /* GithubSignUpVanillaObservablesViewController.swift in Sources */,
 				D4D0AD4F23E4668E0038A691 /* ActivityIndicator.swift in Sources */,
 				D4D0AD4923E408480038A691 /* DefaultImplementations.swift in Sources */,
+				D4D0AD5723E55E6D0038A691 /* GithubSignUpUsingDriverViewModel.swift in Sources */,
 				D471C39723DD9D8900B983CD /* SimpleValidationViewController.swift in Sources */,
 				D43B58CF23DEFA9900A4FA92 /* GeolocationSubscriptionViewController.swift in Sources */,
 			);

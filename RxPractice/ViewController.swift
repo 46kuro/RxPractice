@@ -28,6 +28,7 @@ class ViewController: UIViewController {
             case simpleValidation
             case geolocationSubscription
             case githubSignUpVanillaObservables
+            case githubSignUpUsingDriver
             
             var title: String {
                 switch self {
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
                 case .simpleValidation: return "Simple validation"
                 case .geolocationSubscription: return "Geolocation Subscription"
                 case .githubSignUpVanillaObservables: return "Github SignUp - Vanilla Observables"
+                case .githubSignUpUsingDriver: return "Github SignUp - Using Driver"
                 }
             }
             
@@ -44,6 +46,7 @@ class ViewController: UIViewController {
                 case .simpleValidation: return "Bindings"
                 case .geolocationSubscription: return "Observers, services and Drive example"
                 case .githubSignUpVanillaObservables: return "Simple MVVM example"
+                case .githubSignUpUsingDriver: return "Simple MVVM example"
                 }
             }
         }
@@ -126,6 +129,9 @@ extension ViewController: UITableViewDelegate {
                 navigationController?.pushViewController(viewController, animated: true)
             case .githubSignUpVanillaObservables:
                 let viewController = GithubSignUpVanillaObservablesViewController.instantiate() as! GithubSignUpVanillaObservablesViewController
+                navigationController?.pushViewController(viewController, animated: true)
+            case .githubSignUpUsingDriver:
+                let viewController = GithubSignUpUsingDriverViewController.instantiate() as! GithubSignUpUsingDriverViewController
                 navigationController?.pushViewController(viewController, animated: true)
             }
         case .tableCollectionView:
